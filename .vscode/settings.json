@@ -1,0 +1,9 @@
+{
+    "cmake.sourceDirectory": "C:/Users/User/AndroidStudioProjects/project_thirty_widget/windows",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "workbench.colorCustomizations": {
+        // "editorError.foreground" : "#00000000",
+        // "editorWarning.foreground" : false,
+        "editorInfo.foreground" : "#00000000",
+    }
+}
