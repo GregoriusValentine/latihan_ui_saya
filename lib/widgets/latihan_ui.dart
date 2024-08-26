@@ -26,16 +26,18 @@ class _LatihanUiState extends State<LatihanUI> {
                   // color: Colors.yellow,
                   child: Stack(
                     children: [
-                      Positioned(child: Container(
-                        decoration: BoxDecoration(
-                          // color: Colors.red,
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage('https://jambiindependent.bacakoran.co/upload/b6a26a160126b62dd54a9a0f477dfccb.jpg')
-                          )
-                        ),
-                        height: 450,
-                      )),
+                      Positioned(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            // color: Colors.red,
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/luffy.jpg')
+                            )
+                          ),
+                          height: 450,
+                        )
+                      ),
                       Positioned(
                         bottom: 0,
                         right: 30,
@@ -45,29 +47,31 @@ class _LatihanUiState extends State<LatihanUI> {
                         )
                       ),
                       Positioned(
-                        top: 70,
-                        left: 30,
+                        top: h * 0.1, // Menggunakan 10% dari tinggi layar
+                        left: 0, // Posisi awal di kiri 0
+                        right: 0, // Posisi awal di kanan 0
                         child: Container(
-                          // color: Colors.blue,
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween, // Mengatur ikon ke ujung kiri dan kanan
                             children: [
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.arrow_back_rounded,
-                                    color: Colors.white,
-                                    size: 40,
-                                  ),
-                                  SizedBox(
-                                    width: 250,
-                                  ),
-                                  Icon(
-                                    Icons.favorite_border_rounded,
-                                    color: Colors.white,
-                                    size: 40,
-                                  )
-                                ],
-                              )
+                              // Menambahkan margin di kiri 5%
+                              Container(
+                                margin: EdgeInsets.only(left: w * 0.05), // 5% margin kiri
+                                child: Icon(
+                                  Icons.arrow_back_rounded,
+                                  color: Colors.white,
+                                  size: w * 0.05, // Ukuran ikon responsif
+                                ),
+                              ),
+                              // Menambahkan margin di kanan 5%
+                              Container(
+                                margin: EdgeInsets.only(right: w * 0.05), // 5% margin kanan
+                                child: Icon(
+                                  Icons.favorite_border_rounded,
+                                  color: Colors.white,
+                                  size: w * 0.05, // Ukuran ikon responsif
+                                ),
+                              ),
                             ],
                           ),
                         ),
